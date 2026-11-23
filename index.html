@@ -52,6 +52,30 @@
   a:hover { color: var(--color-accent); }
   ::selection { background: var(--color-accent-200); }
   table { border-collapse: collapse; }
+  /* ---- Mobile / tablet layout ---- */
+  @media (max-width: 960px) {
+    nav.nav { flex-wrap: wrap !important; row-gap: 6px !important; padding-inline: 16px !important; }
+    nav.nav > div:nth-of-type(1) {
+      order: 3; flex: 1 0 100% !important; min-width: 0 !important; margin-left: 0 !important;
+      padding: 6px 0 2px !important; justify-content: flex-start !important; gap: 20px !important;
+      overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+      border-top: 1px solid var(--color-divider);
+    }
+    nav.nav > div:nth-of-type(1)::-webkit-scrollbar { display: none; }
+    nav.nav > div:nth-of-type(2) { margin-left: auto; }
+    nav.nav > div:nth-of-type(2) > .btn { display: none !important; }
+    [style*="minmax(0, 1.85fr) minmax(240px, 1fr)"] { grid-template-columns: minmax(0, 1fr) !important; }
+  }
+  @media (max-width: 640px) {
+    [style*="repeat(auto-fit, minmax(340px"], [style*="repeat(auto-fit, minmax(320px"],
+    [style*="repeat(auto-fit, minmax(300px"], [style*="repeat(auto-fill, minmax(300px"],
+    [style*="repeat(auto-fit, minmax(280px"] { grid-template-columns: minmax(0, 1fr) !important; }
+    nav.nav select { padding: 7px 28px 7px 10px !important; }
+    nav.nav > div:nth-of-type(1) { gap: 14px !important; font-size: 13px !important; }
+    nav.nav .btn { padding-block: 7px !important; }
+    [style*="position: fixed; right: clamp(16px, 2vw, 28px)"] { right: 12px !important; bottom: 12px !important; gap: 6px !important; }
+    [style*="position: fixed; right: clamp(16px, 2vw, 28px)"] .btn { font-size: 12px !important; padding: 6px 10px !important; }
+  }
 </style>
 </helmet>
 
