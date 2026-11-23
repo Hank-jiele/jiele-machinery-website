@@ -65,11 +65,14 @@
     nav.nav > div:nth-of-type(2) { margin-left: auto; }
     nav.nav > div:nth-of-type(2) > .btn { display: none !important; }
     [style*="minmax(0, 1.85fr) minmax(240px, 1fr)"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-gallery="photos"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   }
   @media (max-width: 640px) {
     [style*="repeat(auto-fit, minmax(340px"], [style*="repeat(auto-fit, minmax(320px"],
     [style*="repeat(auto-fit, minmax(300px"], [style*="repeat(auto-fill, minmax(300px"],
     [style*="repeat(auto-fit, minmax(280px"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-gallery="photos"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-gallery="photos"] img { height: 240px !important; }
     nav.nav select { padding: 7px 28px 7px 10px !important; }
     nav.nav > div:nth-of-type(1) { gap: 14px !important; font-size: 13px !important; }
     nav.nav .btn { padding-block: 7px !important; }
@@ -235,11 +238,13 @@
   <div>
 
     <section style="border-bottom: 2px solid var(--color-divider);">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: var(--color-divider);">
-        <figure style="margin: 0;"><img src="assets/machine-studio.jpg" alt="JIELE" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/machine-2.jpg" alt="JIELE" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/machine-3.jpg" alt="JIELE" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/machine-4.jpg" alt="JIELE" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+      <div data-gallery="photos" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: var(--color-divider);">
+        <figure style="margin: 0;"><img src="assets/machine-studio.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="assets/machine-2.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="assets/factory-1.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="assets/machine-4.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="assets/factory-2.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="assets/factory-3.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
       </div>
     </section>
 
@@ -1233,6 +1238,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/company/jiele-machinery/posts/?fe
 const NEWS_POSTS = [
   { id: "p1", date: "2026.10.01", url: "https://www.linkedin.com/posts/highspeedheader-highspeedcoldformer-fastener-ugcPost-7511292395452301312-h2hn/",
     media: { type: "youtube", id: "hEzc0FRbOdA" },
+    thumb: "assets/news/p1-thumb.jpg",
     title: {
       zh: "又一里程碑：304L 不鏽鋼內六角螺絲成型機出貨",
       en: "Another milestone: 304L stainless hex socket screw former ready to ship",
@@ -1997,7 +2003,7 @@ class Component extends DCLogic {
       const slides = [];
       for (let k = 0; k < n; k++) slides.push({ id: "news-" + p.id + (k ? "-" + (k + 1) : ""), label: nwT.imgPh + (n > 1 ? " " + (k + 1) : ""), src: photos[k] || "", fit: media.fit || "cover", hasSrc: !!photos[k], noSrc: !photos[k] });
       return {
-        id: p.id, date: p.date, url: p.url, slotId: "news-" + p.id, thumb: photos[0] || "", hasThumb: !!photos[0], noThumb: !photos[0],
+        id: p.id, date: p.date, url: p.url, slotId: "news-" + p.id, thumb: p.thumb || photos[0] || "", hasThumb: !!(p.thumb || photos[0]), noThumb: !(p.thumb || photos[0]),
         isVideo: media.type === "video", isImages: media.type === "images",
         isYoutube: media.type === "youtube", ytSrc: media.id ? "https://www.youtube.com/embed/" + media.id + "?autoplay=1&mute=1&loop=1&playlist=" + media.id + "&playsinline=1&rel=0&modestbranding=1&enablejsapi=1" + (/^https?:/.test(location.origin) ? "&origin=" + encodeURIComponent(location.origin) : "") : "",
         isEmbed: media.type === "linkedin", embedSrc: media.urn ? "https://www.linkedin.com/embed/feed/update/" + media.urn + "?collapsed=1" : "",
