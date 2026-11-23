@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>JIELE global markets</title>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #fff; overflow: hidden; }
+  #map { display: block; width: 100%; height: auto; }
+  text { font-family: Archivo, "Noto Sans TC", sans-serif; }
+</style>
+</head>
+<body>
+<svg id="map" viewBox="0 -26 1200 450" preserveAspectRatio="xMidYMid meet" role="img" aria-label="JIELE export markets"></svg>
+<script>
+const LAND = "#0f7f86";
+const INK = "#12384f";
+const ACCENT = "#ec3013";
+
+const TAIWAN = [121.0, 23.7];
+const TARGETS = [
+  { name: "JAPAN",     c: [139.2, 36.2], dx: 18,  dy: -10, a: "start" },
+    { name: "INDIA",     c: [78.5, 17.0],  dx: 0,   dy: -13, a: "middle", straight: true },
+  { name: "VIETNAM",   c: [106.0, 16.5], dx: 16,  dy: 32,  a: "start" },
+  { name: "THAILAND",  c: [100.8, 15.5], dx: -8,  dy: 24,  a: "end" },
+  { name: "MALAYSIA",  c: [102.0, 3.5],  dx: -22, dy: 30,  a: "end" },
+  { name: "INDONESIA", c: [110.0, -6.5], dx: 0,   dy: 24,  a: "middle" },
+  { name: "TURKEY",    c: [35.0, 39.0],  dx: 6,   dy: 30,  a: "middle", straight: true },
+  { name: "POLAND",    c: [19.4, 52.0],  dx: 10,  dy: -14, a: "start", apex: 74 },
+  { name: "GERMANY",   c: [10.4, 51.2],  dx: -14, dy: -4,  a: "end", apex: 52 },
+  { name: "ITALY",     c: [12.6, 42.8],  dx: -14, dy: 22,  a: "end", apex: 98 },
+  { name: "USA",       c: [-98.0, 39.5], dx: 0,   dy: -22, a: "middle", arctic: true },
+];
+
+const svg = d3.select("#map");
+const W = 1200, H = 505;
+
+const projection = d3.geoNaturalEarth1().rotate([-11, 0]).scale(218).translate([W / 2, 292]);
+const path = d3.geoPath(projection);
+
+const gLand = svg.append("g");
+const gArcs = svg.append("g");
+const gPts = svg.append("g");
+
+function arc(a, b, up, straight, arctic) {
+  const p = projection(a), q = projection(b);
+  if (!p || !q) return null;
+  if (straight) return { d: `M${p[0]},${p[1]} L${q[0]},${q[1]}`, p, q };
+  if (arctic) {
+    const span = p[0] - q[0];
+    const c1 = [p[0] - span * 0.10, 26];
+    const c2 = [q[0] + span * 0.22, -12];
+    return { d: `M${p[0]},${p[1]} C${c1[0]},${c1[1]} ${c2[0]},${c2[1]} ${q[0]},${q[1]}`, p, q };
+  }
+  const mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2;
+  const dx = q[0] - p[0], dy = q[1] - p[1];
+  const len = Math.hypot(dx, dy) || 1;
+  if (up) {
+    // control point placed so the curve's apex lands on the requested y
+    const cy = 2 * up - (p[1] + q[1]) / 2;
+    return { d: `M${p[0]},${p[1]} Q${mx},${cy} ${q[0]},${q[1]}`, p, q };
+  }
+  const lift = Math.min(150, len * 0.26);
+  const nx = -dy / len, ny = dx / len;
+  const side = dx >= 0 ? 1 : -1;
+  return { d: `M${p[0]},${p[1]} Q${mx + nx * lift * side},${my + ny * lift * side} ${q[0]},${q[1]}`, p, q };
+}
+
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json").then(topo => {
+  const countries = topojson.feature(topo, topo.objects.countries);
+
+  const DROP = [
+    [-162, -153, 17, 24],   // Hawaii
+    [156, 181, -24, 2],     // Fiji, Vanuatu, Solomon, New Caledonia, Kiribati
+    [-181, -168, -24, 2],   // Samoa / Tonga side of the dateline
+    [-63, -56, -54, -49],   // Falklands
+    [-40, -34, -56, -52],   // South Georgia
+    [50, 80, -56, -44],     // Kerguelen / Heard
+    [-15, -5, -40, -30],    // South Atlantic specks
+  ];
+  const dropped = c => DROP.some(b => c[0] >= b[0] && c[0] <= b[1] && c[1] >= b[2] && c[1] <= b[3]);
+  const feats = countries.features.filter(f => f.id !== "010").map(f => {
+    if (f.geometry.type !== "MultiPolygon") return f;
+    const keep = f.geometry.coordinates.filter(poly =>
+      !dropped(d3.geoCentroid({ type: "Polygon", coordinates: poly })));
+    return { ...f, geometry: { type: "MultiPolygon", coordinates: keep } };
+  });
+  gLand.selectAll("path").data(feats).join("path")
+    .attr("d", path).attr("fill", LAND).attr("stroke", "none");
+
+  const defs = svg.append("defs");
+  defs.append("marker")
+    .attr("id", "head").attr("viewBox", "0 0 10 10")
+    .attr("refX", 8).attr("refY", 5)
+    .attr("markerWidth", 5).attr("markerHeight", 5)
+    .attr("orient", "auto-start-reverse")
+    .append("path").attr("d", "M0,0 L10,5 L0,10 z").attr("fill", ACCENT);
+
+  TARGETS.forEach(t => {
+    const a = arc(TAIWAN, t.c, t.apex, t.straight, t.arctic);
+    if (!a) return;
+    gArcs.append("path").attr("d", a.d).attr("fill", "none")
+      .attr("stroke", ACCENT).attr("stroke-width", 1.8).attr("stroke-linecap", "round")
+      .attr("marker-end", "url(#head)").attr("opacity", 0.92);
+
+    gPts.append("circle").attr("cx", a.q[0]).attr("cy", a.q[1]).attr("r", 3.6)
+      .attr("fill", "#fff").attr("stroke", INK).attr("stroke-width", 1.6);
+
+    const lx = a.q[0] + t.dx, ly = a.q[1] + t.dy;
+    gPts.append("text").attr("x", lx).attr("y", ly)
+      .attr("text-anchor", t.a).attr("fill", INK)
+      .attr("font-size", 17).attr("font-weight", 700).attr("letter-spacing", "0.04em")
+      .attr("stroke", "#fff").attr("stroke-width", 4).attr("paint-order", "stroke")
+      .text(t.name);
+  });
+
+  const tw = projection(TAIWAN);
+  gPts.append("circle").attr("cx", tw[0]).attr("cy", tw[1]).attr("r", 10)
+    .attr("fill", "none").attr("stroke", ACCENT).attr("stroke-width", 1.6).attr("opacity", 0.55);
+  gPts.append("circle").attr("cx", tw[0]).attr("cy", tw[1]).attr("r", 5).attr("fill", ACCENT);
+  gPts.append("text").attr("x", tw[0] + 18).attr("y", tw[1] + 6).attr("text-anchor", "start")
+    .attr("fill", ACCENT).attr("font-size", 19).attr("font-weight", 700).attr("letter-spacing", "0.08em")
+    .attr("stroke", "#fff").attr("stroke-width", 4.5).attr("paint-order", "stroke")
+    .text("TAIWAN");
+});
+</script>
+</body>
+</html>
