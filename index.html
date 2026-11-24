@@ -65,6 +65,9 @@
     nav.nav > div:nth-of-type(2) { margin-left: auto; }
     nav.nav > div:nth-of-type(2) > .btn { display: none !important; }
     [style*="minmax(0, 1.85fr) minmax(240px, 1fr)"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-facts="grid"] { grid-template-columns: minmax(0, 1fr) !important; }
+    [data-ce="cert"] { max-width: 420px; width: 100%; }
+    [data-ce="cert"] a, [data-ce="cert"] img { height: auto !important; }
     [data-gallery="photos"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   }
   @media (max-width: 640px) {
@@ -241,10 +244,10 @@
       <div data-gallery="photos" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: var(--color-divider);">
         <figure style="margin: 0;"><img src="assets/machine-studio.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
         <figure style="margin: 0;"><img src="assets/machine-2.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/factory-1.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="factory-1.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
         <figure style="margin: 0;"><img src="assets/machine-4.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/factory-2.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
-        <figure style="margin: 0;"><img src="assets/factory-3.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="factory-2.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
+        <figure style="margin: 0;"><img src="factory-3.jpg" alt="JIELE" loading="lazy" style="display: block; width: 100%; height: 320px; object-fit: cover;"></figure>
       </div>
     </section>
 
@@ -582,7 +585,7 @@
     <section style="border-bottom: 2px solid var(--color-divider);">
       <div style="max-width: 1240px; margin: 0 auto; padding: 64px clamp(20px, 5vw, 72px);">
         <h2 style="font-size: clamp(22px, 2.4vw, 30px); line-height: 1.3; margin: 0 0 32px;">{{ t.aboutFactsTitle }}</h2>
-        <div style="display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(240px, 1fr); gap: 40px clamp(32px, 5vw, 64px); align-items: stretch;">
+        <div data-facts="grid" style="display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(240px, 1fr); gap: 40px clamp(32px, 5vw, 64px); align-items: stretch;">
         <div style="border-top: 2px solid var(--color-divider);">
           <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
             <div style="display: grid; grid-template-columns: minmax(96px, 148px) minmax(0, 1fr); gap: 12px 20px; padding: 20px 0; border-bottom: 2px solid var(--color-divider);">
@@ -591,7 +594,7 @@
             </div>
           </sc-for>
         </div>
-        <figure style="margin: 0; align-self: stretch;">
+        <figure data-ce="cert" style="margin: 0; align-self: stretch;">
           <a href="assets/ce-certificate.pdf" target="_blank" rel="noopener" style="display: block; height: 100%; border: 2px solid var(--color-divider); background: #fff;">
             <img src="assets/ce-certificate.jpg" alt="CE Certificate of Conformity — EUROCERT" style="display: block; width: 100%; height: 100%; object-fit: contain; object-position: center;">
           </a>
@@ -1263,7 +1266,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/company/jiele-machinery/posts/?fe
 const NEWS_POSTS = [
   { id: "p1", date: "2026.10.01", url: "https://www.linkedin.com/posts/highspeedheader-highspeedcoldformer-fastener-ugcPost-7511292395452301312-h2hn/",
     media: { type: "youtube", id: "hEzc0FRbOdA" },
-    thumb: "assets/news/p1-thumb.jpg",
+    thumb: "p1-thumb.jpg",
     title: {
       zh: "又一里程碑：304L 不鏽鋼內六角螺絲成型機出貨",
       en: "Another milestone: 304L stainless hex socket screw former ready to ship",
@@ -2078,7 +2081,7 @@ class Component extends DCLogic {
       t: t,
       lang: s.lang,
       ct: s.lang === "zh"
-        ? { addr: "高雄市湖內區中山路一段496巷72-17號", tel: "電話：886-7-693-8943", fax: "傳真：886-7-693-2642", mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("高雄市湖內區中山路一段496巷72-17號") }
+        ? { addr: "高雄市湖內區中山路一段496巷72-17號", tel: "電話：886-7-693-8943", fax: "傳真：886-7-693-2645", mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("高雄市湖內區中山路一段496巷72-17號") }
         : { addr: "No. 72-17, Ln. 496, Sec. 1, Zhongshan Rd., Hunei Dist., Kaohsiung City 829003, Taiwan (R.O.C.)", tel: "+886-7-693-8943", fax: "Fax: +886-7-693-2645", mapUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("No. 72-17, Ln. 496, Sec. 1, Zhongshan Rd., Hunei Dist., Kaohsiung City 829003, Taiwan") },
       pkT: Object.assign({}, PICKER.en, PICKER[s.lang] || {}),
       pickerOpen: s.pickerOpen,
