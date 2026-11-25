@@ -1,23 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.jiele-machinery.com/</loc>
     <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/zh/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/ja/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/vi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/th/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/"/>
   </url>
   <url>
     <loc>https://www.jiele-machinery.com/bolt-former-header-about/</loc>
     <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/zh/bolt-former-header-about/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/ja/bolt-former-header-about/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/vi/bolt-former-header-about/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/th/bolt-former-header-about/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-about/"/>
   </url>
   <url>
     <loc>https://www.jiele-machinery.com/bolt-former-header-lineup/</loc>
     <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/zh/bolt-former-header-lineup/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/ja/bolt-former-header-lineup/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/vi/bolt-former-header-lineup/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/th/bolt-former-header-lineup/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-lineup/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-lineup/"/>
   </url>
   <url>
     <loc>https://www.jiele-machinery.com/bolt-former-header-technology/</loc>
     <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/zh/bolt-former-header-technology/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/ja/bolt-former-header-technology/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/vi/bolt-former-header-technology/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/th/bolt-former-header-technology/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-technology/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-technology/"/>
   </url>
   <url>
     <loc>https://www.jiele-machinery.com/bolt-former-header-news/</loc>
     <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/zh/bolt-former-header-news/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/ja/bolt-former-header-news/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/vi/bolt-former-header-news/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+  </url>
+  <url>
+    <loc>https://www.jiele-machinery.com/th/bolt-former-header-news/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.jiele-machinery.com/zh/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.jiele-machinery.com/ja/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.jiele-machinery.com/vi/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://www.jiele-machinery.com/th/bolt-former-header-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jiele-machinery.com/bolt-former-header-news/"/>
   </url>
 </urlset>
