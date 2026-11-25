@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<base href="/">
+<meta name="jl-routes" content="1">
+<link rel="canonical" href="https://www.jiele-machinery.com/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JIELE MACHINERY 捷仂機械｜High-Speed Multi-Station Cold Formers</title>
 <meta name="description" content="JIELE MACHINERY CO., LTD. (捷仂機械) — Taiwan manufacturer of high-efficiency multi-station screw and fastener cold forming machines (HS/HD series).">
@@ -96,11 +99,11 @@
       </span>
     </span>
     <div style="display: flex; flex-wrap: nowrap; align-items: center; align-self: center; gap: 22px; flex: 0 0 auto; min-width: max-content; margin-left: auto; padding-left: 32px; justify-content: flex-end; font-size: 14px; font-weight: 700;">
-      <a href="#top" onClick="{{ goHome }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navHome }}</a>
-      <a href="#about" onClick="{{ goAbout }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navAbout }}</a>
-      <a href="#lineup" onClick="{{ goLineup }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navLineup }}</a>
-      <a href="#core" onClick="{{ goCore }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navCore }}</a>
-      <a href="#news" onClick="{{ goNews }}" style="white-space: nowrap; flex: 0 0 auto;">{{ nw.nav }}</a>
+      <a href="/" onClick="{{ goHome }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navHome }}</a>
+      <a href="/bolt-former-header-about/" onClick="{{ goAbout }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navAbout }}</a>
+      <a href="/bolt-former-header-lineup/" onClick="{{ goLineup }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navLineup }}</a>
+      <a href="/bolt-former-header-technology/" onClick="{{ goCore }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navCore }}</a>
+      <a href="/bolt-former-header-news/" onClick="{{ goNews }}" style="white-space: nowrap; flex: 0 0 auto;">{{ nw.nav }}</a>
       <a href="#contact" onClick="{{ goContactLink }}" style="white-space: nowrap; flex: 0 0 auto;">{{ t.navContact }}</a>
     </div>
     <div style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto;">
@@ -1734,8 +1737,23 @@ const FEAT_I18N = {
   },
 };
 
+const JL_ROUTED = typeof document !== "undefined" && !!document.querySelector('meta[name="jl-routes"]');
+const JL_ROUTES = { home: "/", about: "/bolt-former-header-about/", lineup: "/bolt-former-header-lineup/", core: "/bolt-former-header-technology/", news: "/bolt-former-header-news/" };
+const JL_TITLES = { home: "JIELE MACHINERY 捷仂機械｜High-Speed Multi-Station Cold Formers", about: "About｜JIELE MACHINERY 捷仂機械", lineup: "Machine Lineup｜JIELE MACHINERY 捷仂機械", core: "Technology｜JIELE MACHINERY 捷仂機械", news: "News｜JIELE MACHINERY 捷仂機械" };
+function jlPageFromPath() {
+  if (!JL_ROUTED) return "home";
+  const p = (window.location.pathname || "/").replace(/\/index\.html$/, "/").replace(/\/?$/, "/");
+  for (const k in JL_ROUTES) { if (JL_ROUTES[k] === p) return k; }
+  return "home";
+}
+function jlPush(page) {
+  if (!JL_ROUTED || !JL_ROUTES[page]) return;
+  if (window.location.pathname !== JL_ROUTES[page]) window.history.pushState({ page: page }, "", JL_ROUTES[page]);
+  document.title = JL_TITLES[page] || JL_TITLES.home;
+}
+
 class Component extends DCLogic {
-  state = { page: "home", lang: "en", sent: false, pickerOpen: false, pk: { size: "", len: "", cut: "", st: "" }, hits: null, pkNone: false };
+  state = { page: jlPageFromPath(), lang: "en", sent: false, pickerOpen: false, pk: { size: "", len: "", cut: "", st: "" }, hits: null, pkNone: false };
 
   runPicker() {
     const f = this.state.pk;
@@ -1877,6 +1895,10 @@ class Component extends DCLogic {
   }
 
   componentDidMount() {
+    if (JL_ROUTED) {
+      this._onPop = () => { const pg = jlPageFromPath(); this.setState({ page: pg }); document.title = JL_TITLES[pg] || JL_TITLES.home; window.scrollTo(0, 0); };
+      window.addEventListener("popstate", this._onPop);
+    }
     this.wireReveal();
     this._fitNav = () => this.fitNav();
     window.addEventListener("resize", this._fitNav);
@@ -1977,6 +1999,7 @@ class Component extends DCLogic {
     if (e && e.preventDefault) e.preventDefault();
     const go = () => {
       this.setState({ page: page });
+      jlPush(page);
       if (typeof window !== "undefined") window.scrollTo(0, 0);
     };
     if (page === this.state.page) { if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" }); return; }
@@ -1988,6 +2011,7 @@ class Component extends DCLogic {
     if (page !== this.state.page) {
       this.pageWipe(() => {
         this.setState({ page: page });
+        jlPush(page);
         window.scrollTo(0, 0);
         setTimeout(() => this.navThenScroll(page, id), 320);
       });
